@@ -49,7 +49,7 @@ function App() {
 
   useEffect(() => {
     async function fetchData() {
-      const results = await axios.get(`http://opentable.herokuapp.com/api/restaurants?city=toronto`)
+      const results = await axios.get(`https://opentable.herokuapp.com/api/restaurants?city=toronto`)
       setData(results.data.restaurants)
     }
 
@@ -68,7 +68,7 @@ function App() {
   const handleSubmit = (event, city) => {
     event.preventDefault()
     async function fetchData(city) {
-      const results = await axios.get(`http://opentable.herokuapp.com/api/restaurants?city=${city}`)
+      const results = await axios.get(`https://opentable.herokuapp.com/api/restaurants?city=${city}`)
       setData(results.data.restaurants)
     }
 
