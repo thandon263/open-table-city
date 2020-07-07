@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -10,20 +6,118 @@
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-float infinite 3s ease-in-out;
+    font-weight: 600;
   }
 }
 
-.App-header {
-  min-height: 100vh;
+.App-nav {
+  height: 100px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
+  border-bottom: 1px solid #eee;
 }
+
+.App-nav p {
+  width: 210px;
+  padding: 5px;
+}
+
+.App-header {
+  width: 100%;
+  min-height: 30vh;
+  background-image: url("./assets/restaurant-header.jpg");
+  background-size: cover;
+  flex-direction: column;
+  text-align: center;
+  justify-items: center;
+}
+
+.App-header-content span {
+  font-size: calc(28px + 1vmin);;
+  font-family: "Avenir";
+  font-weight: 600;
+  color: #eee;
+  z-index: 1;
+  position: relative;
+  top: 10vh;
+  margin: 0 auto;
+}
+
+.App-header-content {
+  width: 100%;
+  min-height: 30vh;
+  background-color: #000;
+  opacity: 0.89;
+}
+
+.App-content {
+  padding: 0 5%;
+}
+
+.App-form {
+  position: relative;
+  top: 7rem;
+}
+
+.App-form input {
+  width: calc(500px + 2vmin);
+  height: 40px;
+  border-radius: 5px;
+  font-size: 16pt;
+  padding: 0 10px;
+  border: none;
+}
+
+.App-form button {
+  width: 120px;
+  height: 42px;
+  position: relative;
+  left: 20px;
+  font-size: 14pt;
+  font-weight: 600;
+  background-color: red;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+}
+
+.App-content-text {
+  font-size: .875rem;
+  font-weight: 500;
+  font-family: "Avenir";
+  letter-spacing: 0.1rem;
+}
+
+.App-content-list {
+  width: 250px;
+  height: 300px;
+  border: 1px solid #eee;
+  margin: 10px 0;
+}
+
+.App-content-list img {
+  width: 250px;
+  height: 300px;
+}
+
 
 .App-link {
   color: rgb(112, 76, 182);
+}
+
+.App-footer {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  flex-direction: column;
+  border-top: 1px solid #eee;
+}
+
+.App-footer p {
+  position: relative;
+  top: 25px;
 }
 
 @keyframes App-logo-float {
@@ -35,5 +129,17 @@
   }
   100% {
     transform: translateY(0px)
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .App-form input {
+    width: calc(400px + 2vmin);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .App-form input {
+    width: calc(300px + 2vmin);
   }
 }
